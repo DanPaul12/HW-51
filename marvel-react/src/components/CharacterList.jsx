@@ -21,10 +21,11 @@ const CharacterList = ({onSelect}) => {           //difference between const and
 
   if (characters !== ''){     //what other way to do this? why does it console log 4 times?
   return (                    //why so long to load / why 20 results? / whats deal with class components
-    <div id='container'> 
+    <div id='container1'> 
       <ul id='list1'>
+        {console.log(characters)}
         {characters.data.results.map((character)=> 
-        <li key={character.id} onClick={onSelect(character.id)}> 
+        <li key={character.id} onClick={() => onSelect(character.id)}> 
         <img src={character.thumbnail.path+'.jpg'} />
         <p>{character.name}</p></li>
         )}
