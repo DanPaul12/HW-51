@@ -22,7 +22,7 @@ function App() {
   return (
     <div id='container'>
       <h3>Name:</h3>
-      {console.log(character)}
+      {console.log(character.data.results[0].name)}
     </div>
   )
 }
