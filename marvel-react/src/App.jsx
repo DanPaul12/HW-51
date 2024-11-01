@@ -13,8 +13,8 @@ function App() {
                                 
   return (                    
     <div id='container'> 
-        <CharacterList onSelect = {handleSelect}/>
-        <CharacterDetails characterID = {characterID}/>
+        <CharacterList />
+        
     </div>
   )}
 

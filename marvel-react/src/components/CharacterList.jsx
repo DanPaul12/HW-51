@@ -24,7 +24,7 @@ const CharacterList = (onSelect) => {           //difference between const and f
     <div id='container'> 
       <ul id='list1'>
         {characters.data.results.map((character)=> 
-        <li key={character.id} onClick={onSelect(character.id)}> 
+        <li key={character.id} > 
         <img src={character.thumbnail.path+'.jpg'} />
         <p>{character.name}</p></li>
         )}
