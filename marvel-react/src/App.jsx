@@ -7,14 +7,14 @@ function App() {
 
   const [characterID, setCharacterID] = useState(null)
  
-  const handleSelect = (selectedCharacter) => {
-    setCharacterID(selectedCharacter)
-  }
+  const handleSelect = (character) => {
+    setCharacterID(character)}
+
                                 
   return (                    
     <div id='container'> 
-        <CharacterList />
-        
+        <CharacterList onSelect = {handleSelect}/>
+        <CharacterDetails characterID = {characterID} />
     </div>
   )}
 
