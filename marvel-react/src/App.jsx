@@ -7,7 +7,8 @@ function App() {
   const [character, setCharacter] = useState('')
 
   useEffect(() => {
-    getCharacter('nightcrawler')
+    if (character === '') {
+    getCharacter('nightcrawler')}
   }, [])
 
   const getCharacter = async (marvelname) =>{
@@ -22,7 +23,7 @@ function App() {
   return (
     <div id='container'>
       <h3>Name:</h3>
-      {console.log(character.data.results[0].name)}
+      {console.log(character)}
     </div>
   )
 }
