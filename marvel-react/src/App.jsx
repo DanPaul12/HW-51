@@ -22,7 +22,7 @@ function App() {
   }
   return (
     <div id='container'>
-
+      <h3>{character.name}</h3>
     </div>
   )
 }
