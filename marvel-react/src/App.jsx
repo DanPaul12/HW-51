@@ -1,10 +1,10 @@
 import axios from 'axios'
 import './App.css'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
 
-  const [character, setCharacter] = useState(null)
+  const [character, setCharacter] = useState('')
 
   useEffect(() => {
     getCharacter('nightcrawler')
@@ -14,6 +14,7 @@ function App() {
     try {
       const response = await axios.get(`https://gateway.marvel.com:443/v1/public/characters?name=${marvelname}&limit=1&ts=1&apikey=eed80ca7412bb4d9fb5325f1f50453d0&hash=3104267868a886eae2f5db79822449d8`)
       setCharacter(response.data)
+      console.log(response.data)
       }
     catch (error){
       console.error(error)
@@ -21,7 +22,7 @@ function App() {
   }
   return (
     <div id='container'>
-      <img src= {character.data.results[0].thumbnail.path} />
+
     </div>
   )
 }
