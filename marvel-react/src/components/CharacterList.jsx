@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 
-const CharacterList = ({onSelect}) => {           //difference between const and func?
+const CharacterList = ({onSelect}) => {           
 
   const [characters, setCharacters] = useState('')
 
@@ -19,8 +19,8 @@ const CharacterList = ({onSelect}) => {           //difference between const and
     }
   }
 
-  if (characters !== ''){     //what other way to do this? why does it console log 4 times?
-  return (                    //why so long to load / why 20 results? / whats deal with class components
+  if (characters !== ''){     
+  return (                    
     <div id='container1'> 
       <ul id='list1'>
         {console.log(characters)}
