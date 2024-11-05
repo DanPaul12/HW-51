@@ -6,6 +6,7 @@ import {Routes, Route} from 'react-router-dom'
 import HomePage from './components/HomePage'
 import ErrorPage from './components/ErrorPage'
 import ComicsPage from './components/ComicsPage'
+import NavBar from './components/NavBar'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                                 
   return (                    
     <div id='container'> 
+      <NavBar/>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/characters' element= {<CharacterList onSelect = {handleSelect}/>} />

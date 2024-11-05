@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const CharacterList = ({onSelect}) => {           
 
@@ -26,6 +27,7 @@ const CharacterList = ({onSelect}) => {
         {console.log(characters)}
         {characters.data.results.map((character)=> 
         <li key={character.id} onClick={() => onSelect(character.id)}> 
+        <Link to={`/characters/${character.id}`} />
         <img src={character.thumbnail.path+'.jpg'} />
         <p>{character.name}</p></li>
         )}
