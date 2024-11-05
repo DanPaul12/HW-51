@@ -2,13 +2,14 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 
 
-const CharacterDetails = ({characterID}) => {
+const CharacterDetails = ({characterID, params}) => {
     
     const [characterData, setCharacterData] = useState(null)
 
     useEffect(()=>{
         if (characterID !== null){
             fetchCharacter(characterID)
+            params = characterID
         }
     }, [characterID])
 

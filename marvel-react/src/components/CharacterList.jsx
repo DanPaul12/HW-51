@@ -27,8 +27,9 @@ const CharacterList = ({onSelect}) => {
         {console.log(characters)}
         {characters.data.results.map((character)=> 
         <li key={character.id} onClick={() => onSelect(character.id)}> 
-        <Link to={`/characters/${character.id}`} />
+        <Link to={`/characters/${character.id}`} >
         <img src={character.thumbnail.path+'.jpg'} />
+        </Link>
         <p>{character.name}</p></li>
         )}
       </ul>
