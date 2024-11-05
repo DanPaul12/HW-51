@@ -9,7 +9,6 @@ import ComicsPage from './components/ComicsPage'
 import NavBar from './components/NavBar'
 
 
-
 function App() {
 
   const [characterID, setCharacterID] = useState(null)
