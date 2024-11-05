@@ -30,7 +30,9 @@ const CharacterList = ({onSelect}) => {
         <Link to={`/characters/${character.id}`} >
         <img src={character.thumbnail.path+'.jpg'} />
         </Link>
-        <p>{character.name}</p></li>
+        <p>{character.name}</p>
+        </li>
+        
         )}
       </ul>
     </div>
